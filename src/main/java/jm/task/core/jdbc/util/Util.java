@@ -3,7 +3,6 @@ package jm.task.core.jdbc.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Collections;
 
 public class Util {
     // реализуйте настройку соеденения с БД
@@ -11,7 +10,12 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
 
+    private static Connection connection = null;
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        if (connection == null) {
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        }
+        return connection;
     }
+
 }
