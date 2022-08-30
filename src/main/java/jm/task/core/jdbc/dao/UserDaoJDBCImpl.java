@@ -55,7 +55,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 "WHERE id=?";
         try (Connection connection = Util.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setInt(1, (int)id);
+            preparedStatement.setInt(1, (int) id);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
