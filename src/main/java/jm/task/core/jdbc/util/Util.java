@@ -25,7 +25,9 @@ public final class Util {
     }
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        connection.setAutoCommit(false);
+        return connection;
     }
 
     public static SessionFactory getSessionFactory() {
@@ -43,7 +45,6 @@ public final class Util {
                 configuration.setProperties(settings);
 
                 configuration.addAnnotatedClass(User.class);
-
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
 

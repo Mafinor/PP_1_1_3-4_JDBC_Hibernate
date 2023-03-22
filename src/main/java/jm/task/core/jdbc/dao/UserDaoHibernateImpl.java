@@ -107,4 +107,5 @@ public class UserDaoHibernateImpl implements UserDao {
             e.printStackTrace();
         }
     }
+
 }
