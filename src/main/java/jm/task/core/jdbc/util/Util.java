@@ -16,6 +16,7 @@ public final class Util {
     // реализуйте настройку соеденения с БД
 
     private static SessionFactory sessionFactory;
+    private static Connection connection;
     private static final String URL = "jdbc:mysql://localhost:3306/first_db";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
@@ -24,9 +25,18 @@ public final class Util {
 
     }
 
-    public static Connection getConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        connection.setAutoCommit(false);
+    public static Connection getConnection() {
+        try {
+            if (connection == null || connection.isClosed()) {
+                Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+                connection.setAutoCommit(false);
+                return connection;
+            }
+        } catch (SQLException e) {
+            //log something
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
         return connection;
     }
 
@@ -50,7 +60,9 @@ public final class Util {
 
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);
             } catch (Exception e) {
+                //log something
                 e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
         return sessionFactory;

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ca60d20-ae6e-4cb7-a545-ddecde12c097" name="Changes" comment="transactions fix" />
+    <list default="true" id="9ca60d20-ae6e-4cb7-a545-ddecde12c097" name="Changes" comment="add single connection + minor fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +108,10 @@
       <workItem from="1662925770067" duration="508000" />
       <workItem from="1663100441949" duration="1887000" />
       <workItem from="1679501713937" duration="9943000" />
-      <workItem from="1679512302633" duration="2018000" />
+      <workItem from="1679512302633" duration="3058000" />
+      <workItem from="1679550838256" duration="6000" />
+      <workItem from="1679558974615" duration="25000" />
+      <workItem from="1679559010361" duration="8609000" />
     </task>
     <task id="LOCAL-00001" summary="Transactions are not realised, fixed Util class to match standards">
       <created>1661847313292</created>
@@ -160,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679513315293</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="transactions fix">
+      <created>1679514685144</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679514685144</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +220,7 @@
     <MESSAGE value="changed table names to leave the class untouched" />
     <MESSAGE value="Hibernate included, Service is JDBC" />
     <MESSAGE value="transactions fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="transactions fix" />
+    <MESSAGE value="add single connection + minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="add single connection + minor fix" />
   </component>
 </project>
